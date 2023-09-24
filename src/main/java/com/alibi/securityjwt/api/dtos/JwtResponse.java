@@ -1,4 +1,4 @@
-package com.alibi.securityjwt.dtos;
+package com.alibi.securityjwt.api.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

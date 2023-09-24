@@ -1,8 +1,8 @@
-package com.alibi.securityjwt.controllers;
+package com.alibi.securityjwt.api.controllers;
 
-import com.alibi.securityjwt.dtos.JwtRequest;
-import com.alibi.securityjwt.dtos.RegistrationUserDTO;
-import com.alibi.securityjwt.services.AuthService;
+import com.alibi.securityjwt.api.dtos.JwtRequest;
+import com.alibi.securityjwt.api.dtos.RegistrationUserDTO;
+import com.alibi.securityjwt.api.services.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

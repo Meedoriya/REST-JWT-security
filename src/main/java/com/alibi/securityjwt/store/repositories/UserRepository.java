@@ -1,6 +1,6 @@
-package com.alibi.securityjwt.repositories;
+package com.alibi.securityjwt.store.repositories;
 
-import com.alibi.securityjwt.entities.User;
+import com.alibi.securityjwt.store.entities.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

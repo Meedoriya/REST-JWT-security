@@ -1,4 +1,4 @@
-package com.alibi.securityjwt.entities;
+package com.alibi.securityjwt.store.entities;
 
 import lombok.Data;
 

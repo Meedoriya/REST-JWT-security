@@ -1,7 +1,7 @@
-package com.alibi.securityjwt.services;
+package com.alibi.securityjwt.api.services;
 
-import com.alibi.securityjwt.entities.Role;
-import com.alibi.securityjwt.repositories.RoleRepository;
+import com.alibi.securityjwt.store.entities.Role;
+import com.alibi.securityjwt.store.repositories.RoleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

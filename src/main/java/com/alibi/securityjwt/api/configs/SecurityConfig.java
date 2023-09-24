@@ -1,8 +1,6 @@
-package com.alibi.securityjwt.configs;
+package com.alibi.securityjwt.api.configs;
 
-import com.alibi.securityjwt.JwtRequestFilter;
-import com.alibi.securityjwt.services.UserService;
-import lombok.RequiredArgsConstructor;
+import com.alibi.securityjwt.api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;

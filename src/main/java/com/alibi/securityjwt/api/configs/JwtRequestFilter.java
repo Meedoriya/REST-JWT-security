@@ -1,7 +1,7 @@
-package com.alibi.securityjwt;
+package com.alibi.securityjwt.api.configs;
 
 
-import com.alibi.securityjwt.utils.JwtTokenUtils;
+import com.alibi.securityjwt.api.utils.JwtTokenUtils;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.SignatureException;
 import lombok.RequiredArgsConstructor;
@@ -35,11 +35,11 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             jwt = authHeader.substring(7);
             try {
-                username = jwtTokenUtils.getUsername(jwt);
+                username = jwtTokenUtils.getUsernameFromToken(jwt);
             } catch (ExpiredJwtException e) {
-                log.debug("Время жизни токена вышло");
+                log.debug("The token is expired");
             } catch (SignatureException e) {
-                log.debug("Подпись неправильная");
+                log.debug("Wrong signature");
             }
         }
 

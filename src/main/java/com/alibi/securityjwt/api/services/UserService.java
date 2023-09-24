@@ -1,8 +1,8 @@
-package com.alibi.securityjwt.services;
+package com.alibi.securityjwt.api.services;
 
-import com.alibi.securityjwt.dtos.RegistrationUserDTO;
-import com.alibi.securityjwt.entities.User;
-import com.alibi.securityjwt.repositories.UserRepository;
+import com.alibi.securityjwt.api.dtos.RegistrationUserDTO;
+import com.alibi.securityjwt.store.entities.User;
+import com.alibi.securityjwt.store.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -45,7 +45,7 @@ public class UserService implements UserDetailsService {
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = findByUsername(username).orElseThrow(() -> new UsernameNotFoundException(
-                String.format("Пользователь '%s' не найден", username)
+                String.format("User '%s' isn't found", username)
         ));
         return new org.springframework.security.core.userdetails.User(
                 user.getUsername(),
@@ -55,6 +55,7 @@ public class UserService implements UserDetailsService {
     }
 
     public User createNewUser(RegistrationUserDTO registrationUserDto) {
+
         User user = new User();
         user.setUsername(registrationUserDto.getUsername());
         user.setEmail(registrationUserDto.getEmail());

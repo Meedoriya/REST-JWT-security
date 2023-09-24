@@ -1,4 +1,4 @@
-package com.alibi.securityjwt.controllers;
+package com.alibi.securityjwt.api.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

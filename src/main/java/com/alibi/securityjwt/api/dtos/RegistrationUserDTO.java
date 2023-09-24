@@ -1,8 +1,6 @@
-package com.alibi.securityjwt.dtos;
+package com.alibi.securityjwt.api.dtos;
 
 import lombok.Data;
-
-
 
 @Data
 public class RegistrationUserDTO {
